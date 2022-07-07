@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace PasswordApp
 {
@@ -6,14 +7,10 @@ namespace PasswordApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            Password password = new Password('S','^', 1);
-
-            Console.WriteLine(password.GetPassword());
-
+            Console.WriteLine(" * Генерация пароля * ");
+            Password password = new Password();
+            password.PasswordGeneration(5, 5, 2);
             Console.ReadKey();
-
         }
     }
 }
